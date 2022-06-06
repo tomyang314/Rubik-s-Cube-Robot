@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     m_code = get_command()
     if m_code:
-        print(m_code)
+        print(' '.join(m_code))
 
     while True:
         string = m_code.encode()

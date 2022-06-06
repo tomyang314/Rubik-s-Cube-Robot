@@ -33,13 +33,28 @@ def recovery_code(code_dict):
     for _, number in enumerate(code_list):
         code += code_dict[number]
     print('-'*100)
-    ko_data = kociemba.solve(''.join(code))
+    code_string = ''.join(code)
+    cube_image(code_string)
+    print('-'*100)
+    ko_data = kociemba.solve(code_string)
     code1 = ko_data.split(' ')
     for index, val in enumerate(code1):
         if len(val) == 1:
             code1[index] = val + ' '
 
     return ''.join(code1)
+
+
+def cube_image(string):
+    for i in range(3):
+        print("       " + ' '.join(string[i * 3: (i + 1) * 3]))
+
+    for i in range(3):
+        print(' '.join(string[36 + i * 3: 39 + i * 3]) + '  ' + ' '.join(string[18 + i * 3: 21 + i * 3])
+              + '  ' + ' '.join(string[9 + i * 3: 12 + i * 3]) + '  ' + ' '.join(string[45 + i * 3: 48 + i * 3]))
+
+    for i in range(3):
+        print("       " + ' '.join(string[27 + i * 3: 30 + i * 3]))
 
 
 def get_command():
