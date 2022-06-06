@@ -86,4 +86,4 @@ if __name__ == '__main__':
     # cap = cv2.VideoCapture("http://admin@admin/192.168.43.1:8081")
     m_code = get_command()
     if m_code:
-        print(m_code)
+        print(' '.join(m_code))

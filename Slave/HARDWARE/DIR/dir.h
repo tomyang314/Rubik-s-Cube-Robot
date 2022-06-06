@@ -1,0 +1,28 @@
+#ifndef __LED_H
+#define __LED_H	 
+
+#include "sys.h"
+
+
+//////////////////////////////////////////////////////////////////////////////////	 
+//本程序只供学习使用，未经作者许可，不得用于其它任何用途
+//ALIENTEK战舰STM32开发板
+//LED驱动代码	   
+//正点原子@ALIENTEK
+//技术论坛:www.openedv.com
+//修改日期:2012/9/2
+//版本：V1.0
+//版权所有，盗版必究。
+//Copyright(C) 广州市星翼电子科技有限公司 2009-2019
+//All rights reserved									  
+////////////////////////////////////////////////////////////////////////////////// 
+#define DIR1 PCout(15)	// PC13
+#define DIR2 PAout(4)	// PC13
+#define DIR3 PBout(1)	// PC13
+#define DIR4 PBout(12)	// PC13
+#define DIR5 PBout(5)	// PC13
+#define DIR6 PBout(4)	// PC13
+
+void DIR_Init(void);//初始化
+
+#endif
